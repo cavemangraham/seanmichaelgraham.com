@@ -1,5 +1,8 @@
 <head>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Sean Michael Graham | Software Developer</title>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='flexboxgrid.min.css' rel='stylesheet' type='text/css'>
   <link href='normalize.css' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
@@ -101,6 +104,11 @@
     text-decoration: none;
     color: #64ffda;
     font-family: Roboto Mono;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+#menu li a:hover, #menu li a:focus {
+  transform: translateY(-5px);
 }
 
 .email {
@@ -121,7 +129,6 @@
   text-decoration: none;
   color: #64ffda;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-
 }
 
 .email a:hover, .email a:focus {
@@ -138,6 +145,66 @@
   margin: 2px 15px;
 }
 
+.about {
+  float:left;
+  margin-top: 0px;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: 600;
+  color: #ccd6f6;
+}
+
+.about-header {
+  color: #64ffda;
+  font-family: Roboto Mono;
+  font-size: 20px;
+
+}
+
+.about-body {
+  font-size: 19px;
+  margin-right: 60px;
+  font-weight: 400;
+  color:#ccd6f6;
+  line-height: 1.4;
+}
+
+.about-image {
+  margin-top: 150px;
+  padding-top: 50px;
+}
+
+.about-image img {
+  margin-left: 100px;
+}
+
+.skills-container {
+  display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    overflow: hidden;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+}
+
+.skills-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: Roboto Mono;
+  font-size: 16px;
+  color: rgb(136, 146, 176);
+}
+
+.skills-item::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: rgb(100, 255, 218);
+  font-size: 16px;
+  line-height: 12px;
+}
+
 </style>
 
 
@@ -147,7 +214,7 @@
 <body>
   <ul id="menu">
     <li data-menuanchor="page1" class="active"><a href="#page1">01. <span style="color: #ccd6f6;">Home</span></a></li>
-    <li data-menuanchor="page2"><a href="#page2">02. <span style="color: #ccd6f6;">About</span></a></li>
+    <li data-menuanchor="page2"><a href="#page2">02. <span style="color: #ccd6f6;">About Me</span></a></li>
     <li data-menuanchor="page3"><a href="#page3">03. <span style="color: #ccd6f6;">Testimonials</span></a></li>
   </ul>
   <div class="email">
@@ -168,7 +235,7 @@
           </div>
           <div class="body">
             <p>
-              I specialize in crafting applications and integrations that help business owners automate their workflows.
+              I love crafting applications and integrations that automate workflows to save time and money.
             </p>
           </div>
           <div class="cta-wrapper">
@@ -182,6 +249,32 @@
     </div>
 
     <div class="section">
+      <div class="content">
+        <div class="wrapper">
+            <div class="about" style="float:left; width: 50%;">
+              <div class="about-header">
+                About Me
+              </div>
+              <div class="about-body">
+                <p>Hi! I'm Sean, a software developer and digital nomad.</p>
+
+                <p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
+
+                <p>Shortly after graduating from Rowan University, I joined the engineering team at Verizon where I worked with fullstack data applications and data visualizations.</p>
+
+                <p>Here are a few technologies I've been working with recently:</p>
+                <ul class="skills-container">
+                  <li class="skills-item">
+                    Javascript
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-image">
+              <img src="https://via.placeholder.com/300">
+            </div>
+        </div>
+      </div>
     </div>
 
     <div class="section">
@@ -196,7 +289,7 @@ $(document).ready(function() {
       menu: '#menu',
       direction: 'vertical',
       verticalCentered: true,
-      sectionsColor: ['#0a192f', '#434854', '#00316E'],
+      sectionsColor: ['#0a192f', '#2d3038', '#00316E'],
       anchors: ['page1', 'page2', 'page3'],
       scrollingSpeed: 700,
       easing: 'swing',
