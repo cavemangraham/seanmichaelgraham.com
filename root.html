@@ -1,6 +1,8 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='normalize.css' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
 	<style>
     html,body
 {
@@ -10,43 +12,209 @@
 
 }
 
-
-.hero {
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+.wrapper{
+  margin-left: 150px;
+}
+
+.intro {
+  margin-top: 150px;
+  color: #64ffda;
+  font-size: 20px;
+  font-family: Roboto Mono;
+}
+
+.header {
+  margin-top: 15px;
+  color: #F5D300;
+  font-size: 80px;
+  font-family: Helvetica;
+  font-weight: 600;
+}
+
+.body {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 20px;
+  color: #8892b0;
+  max-width: 500px;
+  font-family: Roboto Mono;
+  line-height: 1.5;
+}
+
+.cta-wrapper {
+  margin-top: 80px;
+}
+
+.cta {
+  border: 1px solid #64ffda;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 45px;
+  color: #64ffda;
   text-align: center;
-  border-bottom: 3px solid #4ABDAC;
+  text-decoration: none;
+  font-family: Roboto Mono;
 }
 
-#background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+.cta:hover, .cta:active, .cta:focus {
+  background-color: rgba(100, 255, 218, 0.07);
 }
 
-#overlay {
-  position: absolute;
+#menu {
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 130;
+  height: 40px;
+  z-index: 70;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #000;
-  opacity: .75;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li.active {
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #64ffda;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 10px 20px;
+
+    color: #000;
+}
+
+#menu li a, #menu li.active a {
+    padding: 9px 0px;
+    display: block;
+    text-decoration: none;
+    color: #64ffda;
+    font-family: Roboto Mono;
+}
+
+.email {
+  position: fixed;
+    bottom: 0px;
+    left: 40px;
+    z-index: 10;
+    color: rgb(168, 178, 209);
+}
+
+.email a {
+  font-family: Roboto Mono;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  padding: 10px;
+  text-decoration: none;
+  color: #64ffda;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+}
+
+.email a:hover, .email a:focus {
+  transform: translateY(-10px);
+}
+
+.email::after {
+  text-align: center;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background-color: #64ffda;
+  margin: 2px 15px;
 }
 
 </style>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
 </head>
 <body>
+  <ul id="menu">
+    <li data-menuanchor="page1" class="active"><a href="#page1">01. <span style="color: #ccd6f6;">Home</span></a></li>
+    <li data-menuanchor="page2"><a href="#page2">02. <span style="color: #ccd6f6;">About</span></a></li>
+    <li data-menuanchor="page3"><a href="#page3">03. <span style="color: #ccd6f6;">Testimonials</span></a></li>
+  </ul>
+  <div class="email">
+    <a href="#">hello@seanmichaelgraham.com</a>
+  </div>
+  <div id="pagepiling">
+    <div class="section">
 
 
+      <div class="content">
+        <div class="wrapper">
+          <div class="intro">
+            Hey, my name is
+          </div>
+          <div class="header">
+            <span style="color: #ccd6f6;">Sean Michael Graham.</span><br>
+            <span style="color: #8892b0;">I build things for the web.</span>
+          </div>
+          <div class="body">
+            <p>
+              I specialize in crafting applications and integrations that help business owners automate their workflows.
+            </p>
+          </div>
+          <div class="cta-wrapper">
+            <a href="#" class="cta">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
 
+    </div>
 
-<video autoplay muted loop id="background">
-  <source src="cyberpunk-bg-video.mp4" type="video/mp4">
-</video>
-<div id="overlay">
-</div>
+    <div class="section">
+    </div>
+
+    <div class="section">
+    </div>
+
+  </div>
 </body>
+
+<script>
+$(document).ready(function() {
+  $('#pagepiling').pagepiling({
+      menu: '#menu',
+      direction: 'vertical',
+      verticalCentered: true,
+      sectionsColor: ['#0a192f', '#434854', '#00316E'],
+      anchors: ['page1', 'page2', 'page3'],
+      scrollingSpeed: 700,
+      easing: 'swing',
+      loopBottom: false,
+      loopTop: false,
+      css3: true,
+      navigation: false,
+      normalScrollElements: null,
+      normalScrollElementTouchThreshold: 5,
+      touchSensitivity: 5,
+      keyboardScrolling: true,
+      sectionSelector: '.section',
+      animateAnchor: false,
+
+    //events
+    onLeave: function(index, nextIndex, direction){},
+    afterLoad: function(anchorLink, index){},
+    afterRender: function(){},
+  });
+}); 
+</script>
