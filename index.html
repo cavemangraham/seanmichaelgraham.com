@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <link rel="icon" type="image/png" href="favicon.png" />
   <title>Sean Michael Graham | Software Developer</title>
@@ -165,7 +167,7 @@
   font-size: 19px;
   margin-right: 60px;
   font-weight: 400;
-  color:#ccd6f6;
+  color: #ccd6f6;
   line-height: 1.4;
 }
 
@@ -180,28 +182,29 @@
 
 .skills-container {
   display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    overflow: hidden;
-    padding: 0px;
-    margin: 20px 0px 0px;
-    list-style: none;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  overflow: hidden;
+  padding: 0px;
+  margin: 20px 0px 0px;
+  list-style: none;
 }
 
 .skills-item {
   position: relative;
-  margin-bottom: 10px;
-  padding-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 25px;
   font-family: Roboto Mono;
   font-size: 16px;
-  color: rgb(136, 146, 176);
+  font-weight: 600;
 }
 
 .skills-item::before {
   content: "▹";
   position: absolute;
   left: 0px;
+  top: 4px;
   color: rgb(100, 255, 218);
-  font-size: 16px;
+  font-size: 24px;
   line-height: 12px;
 }
 
@@ -245,7 +248,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="section">
@@ -262,10 +264,19 @@
 
                 <p>Shortly after graduating from Rowan University, I joined the engineering team at Verizon where I worked with fullstack data applications and data visualizations.</p>
 
-                <p>Here are a few technologies I've been working with recently:</p>
+                <p>Here are a few technologies I work with every day:</p>
                 <ul class="skills-container">
                   <li class="skills-item">
-                    Javascript
+                    Javascript ES6+
+                  </li>
+                  <li class="skills-item">
+                    HTML & CSS
+                  </li>
+                  <li class="skills-item">
+                    Ruby on Rails
+                  </li>
+                  <li class="skills-item">
+                    Postgresql
                   </li>
                 </ul>
               </div>
@@ -311,3 +322,4 @@ $(document).ready(function() {
   });
 }); 
 </script>
+</html>
