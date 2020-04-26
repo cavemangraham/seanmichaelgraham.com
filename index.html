@@ -254,10 +254,22 @@
   background-color: rgba(100, 255, 218, 0.07);
 }
 
+.testimonial-item {
+  background: #ccd6f6;
+  border-radius: 5px;
+  color: #000;
+  padding: 20px;
+  margin: 0px 15px;
+}
+
 </style>
+
+<link rel="stylesheet" type="text/css" href="slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick-theme.css"/>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="slick.min.js"></script>
 <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
 </head>
 <body>
@@ -272,8 +284,6 @@
   </div>
   <div id="pagepiling">
     <div class="section">
-
-
       <div class="content">
         <div class="wrapper">
           <div class="intro">
@@ -336,6 +346,21 @@
     </div>
 
     <div class="section">
+      <div class="content">
+        <div class="wrapper" style="text-align: center; margin-right: 150px;">
+          <div class="testimonial-slider" style="margin-top: 200px;">
+            <div class="testimonial-item">
+              I'm baby gluten-free you probably haven't heard of them brooklyn, banh mi aesthetic bespoke vice schlitz iPhone. Meditation artisan direct trade migas. Ugh bicycle rights seitan deep v artisan pinterest, kickstarter gastropub crucifix VHS unicorn affogato. Heirloom raw denim VHS air plant jianbing microdosing snackwave street art hot chicken biodiesel photo booth lumbersexual craft beer gluten-free cardigan. Lumbersexual mumblecore tumblr meh small batch roof party gastropub. Hella waistcoat cardigan viral, kitsch vaporware beard put a bird on it +1 artisan.
+            </div>
+            <div class="testimonial-item">
+              Direct trade vinyl adaptogen, occupy poutine flannel DIY air plant. Selvage pitchfork disrupt, waistcoat mustache cronut aesthetic forage. You probably haven't heard of them deep v next level hella shaman. Next level try-hard prism beard, portland vice pok pok pickled. Heirloom vaporware try-hard gochujang unicorn authentic.
+            </div>
+            <div class="testimonial-item">
+              Microdosing salvia 90's helvetica tumeric kombucha. Vice wolf jean shorts hella, gochujang single-origin coffee flexitarian salvia. Palo santo sustainable austin, fanny pack helvetica humblebrag bushwick ugh cold-pressed narwhal butcher salvia succulents. Pok pok you probably haven't heard of them af pinterest cloud bread waistcoat listicle lo-fi. DIY austin taiyaki, etsy marfa cred direct trade palo santo taxidermy leggings. Deep v poutine normcore, taiyaki whatever chartreuse man braid disrupt prism freegan wayfarers. Messenger bag unicorn intelligentsia, ethical shaman raw denim trust fund austin subway tile semiotics schlitz.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section">
@@ -388,5 +413,22 @@ $(document).ready(function() {
     afterRender: function(){},
   });
 }); 
+
+$(document).ready(function () {
+  $('.testimonial-slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [{
+    breakpoint: 850,
+    settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    }
+    }]
+  });
+});
 </script>
 </html>
