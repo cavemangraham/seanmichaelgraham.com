@@ -40,7 +40,6 @@
 
 .header {
   margin-top: 15px;
-  color: #F5D300;
   font-size: 80px;
   font-family: Helvetica;
   font-weight: 600;
@@ -109,7 +108,7 @@
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
-#menu li a:hover, #menu li a:focus {
+#menu li a:hover {
   transform: translateY(-5px);
 }
 
@@ -159,13 +158,13 @@
 .about-header {
   color: #64ffda;
   font-family: Roboto Mono;
-  font-size: 20px;
-
+  font-size: 30px;
 }
 
 .about-body {
   font-size: 19px;
   margin-right: 60px;
+  margin-top: 20px;
   font-weight: 400;
   color: #ccd6f6;
   line-height: 1.4;
@@ -177,7 +176,11 @@
 }
 
 .about-image img {
+  width: 350px;
   margin-left: 100px;
+  border: 2px solid #64ffda;
+  border-radius: 200px;
+  position: relative;
 }
 
 .skills-container {
@@ -208,6 +211,49 @@
   line-height: 12px;
 }
 
+.contact-title {
+  margin-top: 250px;
+  margin-right: 150px;
+  text-align: center;
+  color: #ccd6f6;
+  font-size: 80px;
+  font-family: Helvetica;
+  font-weight: 600;
+}
+
+.contact-subtitle {
+  padding-right: 150px;
+  width: 60%;
+  margin: 30px auto;
+  color: #8892b0;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 600;
+}
+
+.contact-cta-wrapper {
+  text-align: center;
+  margin-right: 150px;
+  margin-top: 80px;
+}
+
+.contact-cta {
+  width: 300px;
+  border: 1px solid #64ffda;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 45px;
+  color: #64ffda;
+  text-decoration: none;
+  font-family: Roboto Mono;
+
+}
+
+.contact-cta:hover, .contact-cta:active, .contact-cta:focus {
+  background-color: rgba(100, 255, 218, 0.07);
+}
+
 </style>
 
 
@@ -219,6 +265,7 @@
     <li data-menuanchor="home" class="active"><a href="#home">01. <span style="color: #ccd6f6;">Home</span></a></li>
     <li data-menuanchor="about"><a href="#about">02. <span style="color: #ccd6f6;">About Me</span></a></li>
     <li data-menuanchor="testimonials"><a href="#testimonials">03. <span style="color: #ccd6f6;">Testimonials</span></a></li>
+    <li data-menuanchor="contact"><a href="#contact">04. <span style="color: #ccd6f6;">Contact</span></a></li>
   </ul>
   <div class="email">
     <a href="#">hello@seanmichaelgraham.com</a>
@@ -267,7 +314,7 @@
                 <p>Here are a few technologies I work with every day:</p>
                 <ul class="skills-container">
                   <li class="skills-item">
-                    Javascript ES6+
+                    JavaScript ES6+
                   </li>
                   <li class="skills-item">
                     HTML & CSS
@@ -282,13 +329,33 @@
               </div>
             </div>
             <div class="about-image">
-              <img src="https://via.placeholder.com/300">
+              <img src="profile.png">
             </div>
         </div>
       </div>
     </div>
 
     <div class="section">
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="wrapper" style="text-align: center;">
+          <div class="contact-title">
+            Let's talk.
+          </div>
+      
+          <div class="contact-subtitle">
+            I'm currently open for projects!
+          </div>
+
+          <div class="contact-cta-wrapper">
+            <a href="#" class="contact-cta">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -300,8 +367,8 @@ $(document).ready(function() {
       menu: '#menu',
       direction: 'vertical',
       verticalCentered: true,
-      sectionsColor: ['#0a192f', '#2d3038', '#00316E'],
-      anchors: ['home', 'about', 'testimonials'],
+      sectionsColor: ['#0a192f', '#2d3038', '#00316E', '#000'],
+      anchors: ['home', 'about', 'testimonials', 'contact'],
       scrollingSpeed: 700,
       easing: 'swing',
       loopBottom: false,
