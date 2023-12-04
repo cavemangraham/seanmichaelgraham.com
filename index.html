@@ -23,12 +23,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 	<style>
-    html , body{
-       overflow-x: hidden !important;
-    }
 
     body {
       overflow-y: scroll;
+      overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
       background-color: #0a192f;
     }
@@ -643,7 +641,7 @@ figure.testimonial .people h3 {
   </div>
   <div id="container-fluid">
     <div class="email">
-      <a href="#">hello@seanmichaelgraham.com</a>
+      <a href="mailto:hello@seanmichaelgraham.com">hello@seanmichaelgraham.com</a>
     </div>
       <div id="home">
         <div class="intro col-sm-10 col-sm-offset-1">
@@ -670,14 +668,21 @@ figure.testimonial .people h3 {
             About Me
           </div>
           <div class="about-body">
-            <p>I help business owners reclaim their sanity and free time using custom-fit business automation.</p>
+            <p>Agencies and start ups like to move fast and break things. I'm here to put those pieces back together in a way that makes the most sense for your unique business.</p>
 
-            <p>Shortly after graduating with my degree in Entrepreneurship and Business Management I joined the engineering team at Verizon. There I used my business and programming expertise to craft automations which helped teams work more effectively.</p>
-
-            <p>Now I do the same thing for small businesses and start ups. I analyze their business processes end-to-end then use a combination of existing tools and custom programming to deliver massive amounts of value.</p>
+            <p>I analyze your workflows and then use a combination of existing tools and custom code to deliver massive amounts of value for you and your team.</p>
 
             <p>Here are a few services I've used with clients recently:</p>
             <ul class="skills-container">
+            <li class="skills-item">
+                ChatGPT & Bard - AI
+              </li>
+              <li class="skills-item">
+                Facebook & Slack & Discord - Messaging
+              </li>
+              <li class="skills-item">
+                Stripe & Paypal - Payment Processing & Subscriptions
+              </li>
               <li class="skills-item">
                 Trello - Workflow Management
               </li>
@@ -685,15 +690,11 @@ figure.testimonial .people h3 {
                 Mailgun - Email Alerts
               </li>
               <li class="skills-item">
-                Twilio - Text & Phone Messaging
+                Twilio - SMS & Phone calls
               </li>
               <li class="skills-item">
-                Stripe - Payment Processing & Subscriptions
+                PostGrid - Physical Mail
               </li>
-              <li class="skills-item">
-                Facebook Messenger - Chatbots
-              </li>
-
             </ul>
           </div>
         </div>
@@ -755,53 +756,77 @@ figure.testimonial .people h3 {
         </div>
 
         <div class="work-header col-sm-12">
-          <a href="https://www.aristocracyfamily.com" target="_blank">Aristocracy Family</a>
+          <a>LLC Posters</a>
         </div>
 
         <div class="row equal work-row">
           <div class="work-image col-sm-5 col-sm-offset-1">
-            <img class="img-responsive" src="aristocracy_family.png"></img>
+            <img class="img-responsive" src="devon_llc_scrape.png"></img>
           </div>
 
           <div class="work-body col-sm-5">
             <ul>
-              <li>Automated an entire fulfillment process that replaced an entire team of virtual assistants saving <span style="color:#64ffda">$40,000+</span> per year.</li>
-              <li>Moved the team from a folder-based system on Google Drive to a custom built Trello board gaining <b>hundreds of hours of employee time.</b></li>
-              <li>Daily profit calculations are automatically sent in a daily email to the CEO replacing <b>~10 accountant hours per month.</b></li>
+              <li>Replaced a team of 4 fulltime VAs who were doing this process manually saving <span style="color:#64ffda">$25,000+</span> per year.</li>
+              <li>Automated their process for finding ideal customers and sending physical mail to their newly registered LLCs.</li>
+              <li>Built a custom scraper and integrated with the PostGrid API so every new LLC registered in a State was contacted.</li>
             </ul>
             <div class="work-tools col-sm-12">
-              Trello Shopify Mailgun PosterXXL Ruby
+              Web Scraping, PostGrid
             </div>
           </div>
         </div>
 
         <div class="work-header col-sm-12">
-          <a href="https://www.aristocracyfamily.com" target="_blank">FeastFlow</a>
+          <a>Aristocracy Family</a>
         </div>
 
         <div class="row equal work-row">
           <div class="work-image col-sm-5 col-sm-offset-1">
-            <img class="img-responsive" src="feastflow.png"></img>
+            <img class="img-responsive" src="aristocracy_family_trello.png"></img>
           </div>
 
           <div class="work-body col-sm-5">
             <ul>
-              <li>Sent <span style="color:#64ffda">2,100+</span> targeted job leads to paying customers since October 2018.</li>
-              <li>Wrote code that pulls remote developer job leads from 250+ sources and sifts through 3,000+ leads each day.</li>
-              <li>Tags are programmatically applied in Trello based on text analysis of the required technologies for each job.</li>
+              <li>Automated their entire fulfillment process that replaced a 5 person team of virtual assistants saving <span style="color:#64ffda">$40,000+</span> per year.</li>
+              <li>Moved the team from a folder-based system on Google Drive to a custom built Trello board saving <b>hundreds of hours of employee time.</b></li>
+              <li>Daily profit calculations are automatically sent in a daily email to the CEO replacing <b>~10 accountant hours per month.</b></li>
             </ul>
             <div class="work-tools col-sm-12">
-              Mailchimp Trello RSS Ruby
+              Trello, Shopify, Mailgun, PosterXXL
             </div>
           </div>
-          
         </div>
+
+        <div class="work-header col-sm-12">
+          <a>Adsvisors</a>
+        </div>
+
+        <div class="row equal work-row">
+          <div class="work-image col-sm-5 col-sm-offset-1">
+            <img class="img-responsive" src="clickfunnels_screenshot.png"></img>
+          </div>
+
+          <div class="work-body col-sm-5">
+            <ul>
+              <li>Automated a recurring task for a busy founder and saved them <span style="color:#64ffda">5+ hours</span> per week.</li>
+              <li>Connected their Clickfunnels signups to automatically be added to Mailchimp as well as SMS outreach using Twilio.</li>
+              <li>Increased total sign up and response rates for their campaigns significantly through automated follow ups.</li>
+            </ul>
+            <div class="work-tools col-sm-12">
+              Clickfunnels, Mailchimp, Twilio, Email
+            </div>
+          </div>
+        </div>
+
+
+
+
       </div>
 
       <div class="text-center" id="contact">
         <div class="row">
           <div class="contact-title col-sm-8 col-sm-offset-2">
-            Let me tell you how I can save you at least $10,000 per year using automation.
+            Let me help you get more hours out of each day.
           </div>
         </div>
         <div class="row">
